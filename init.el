@@ -43,12 +43,11 @@
 (add-hook 'org-mode-hook 
           (lambda () 
             (linum-mode -1)))
-
+;; opening org mode with auto-fill
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
 ;; to install packages like magit from the melpa archive
 ;; using stable because i would not like my emacs to break
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
-;; opening org mode with auto-fill
-;;(add-hook 'org-mode-hook 'turn-on-auto-fill)
